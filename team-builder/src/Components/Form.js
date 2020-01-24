@@ -23,7 +23,7 @@ const Form = props => {
   };
 
   return (
-    <div>
+    <div className='info'>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Members' Name</label>
         <br />
@@ -35,10 +35,11 @@ const Form = props => {
           value={member.name}
           onChange={handleChanges}
           required
-        />
+        /><br></br>
         <br />
         <label htmlFor="email">Members' Email</label>
         <br />
+        
         <input
           type="email"
           id="email"
@@ -47,7 +48,7 @@ const Form = props => {
           value={member.email}
           onChange={handleChanges}
           required
-        />
+        /><br></br>
         <br />
         <label htmlFor="role">Members' Role</label>
         <br />
@@ -59,13 +60,16 @@ const Form = props => {
         >
           <option value="Backend Engineer">Backend Engineer</option>
           <option value="Frontend Engineer">Frontend Engineer</option>
-          <option value="UX Designer">UX Designer</option>
           <option value="Fullstack Engineer">Full Stack Engineer</option>
+          <option value="UX Designer">UX Designer</option>
+          <option value="UI Appentice">UI Apprentice</option>
+          <option value="Graphic Designer">Graphic Designer</option>
+          
         </select>
-        <br />
-        <label htmlFor="addMember">Add Member</label>
+        <br /><br></br>
+        
         <button type="submit" id="addMember">
-          Submit
+          Add Member
         </button>
       </form>
     </div>
